@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class controlesJugador : MonoBehaviour {
-    public float velocidad = 8f, velMax = 1.1f, fuerzaSalto = 4f, stamina = 100, limitacion;
+    public float velocidad = 8f, velMax = 1.1f, fuerzaSalto = 3.8f, stamina = 100, limitacion, h;
     private Animator anim;
     private Rigidbody2D rigi;
     private BoxCollider2D col2D;
@@ -28,12 +28,12 @@ public class controlesJugador : MonoBehaviour {
         anim.SetBool("Saltando", saltando);
         anim.SetBool("Enmochilado", enmochilado);
         
-        if (Input.GetKeyDown(KeyCode.UpArrow) && pisando)
+        if (Input.GetKeyDown(KeyCode.W) && pisando)
         {
             saltando = true;
             paso = true;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow) && pisando)
+        if (Input.GetKeyDown(KeyCode.S) && pisando)
         {
             if (agachado)
             {
@@ -76,9 +76,7 @@ public class controlesJugador : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        
-        
-        float h = Input.GetAxis("Horizontal");
+        h = Input.GetAxis("Horizontal");
         rigi.AddForce(Vector2.right * velocidad * h);
         limitacion = Mathf.Clamp(rigi.velocity.x, -velMax, velMax);
         if(corriendo)
@@ -95,7 +93,7 @@ public class controlesJugador : MonoBehaviour {
             {
                 velMax = 1.1f;
             }
-            fuerzaSalto = 4f;
+            fuerzaSalto = 3.8f;
             corriendo = false;
         }
         rigi.velocity = new Vector2(limitacion, rigi.velocity.y);
@@ -129,7 +127,7 @@ public class controlesJugador : MonoBehaviour {
     {
         if (corriendo && pisando)
         {
-            fuerzaSalto = 4f;
+            fuerzaSalto = 3.8f;
             corriendo = false;
         }
         else
@@ -137,7 +135,7 @@ public class controlesJugador : MonoBehaviour {
             if(stamina > 25)
             {
                 velMax = 9f;
-                fuerzaSalto = 5.2f;
+                fuerzaSalto = 4.4f;
                 corriendo = true;
             }
         }
@@ -148,7 +146,7 @@ public class controlesJugador : MonoBehaviour {
         if(corriendo && cambiar)
         {
             velMax = 1.1f;
-            fuerzaSalto = 4f;
+            fuerzaSalto = 3.8f;
             corriendo = false;
         }
     }

@@ -13,7 +13,7 @@ public class seguidorInventario : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         posX = mono.transform.position.x;
-        posY = mono.transform.position.y + 4;
+        posY = mono.transform.position.y;
         transform.position = new Vector3(
             posX,
             posY,

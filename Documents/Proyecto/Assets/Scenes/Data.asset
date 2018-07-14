@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee5e68d015522a45990af6d800c3bf5, type: 3}
+  m_Name: Data
+  m_EditorClassIdentifier: 
+  baseDatos:
+  - nombre: Posion
+    sprite: {fileID: 21300000, guid: 6fd2fc71ed8dad34ba16ba6f7fec4dcb, type: 3}
+    uso: 1
+    limite: 9
+    descripcion: Recupera PS al jugador
+    funcion: Pocion
+  - nombre: Pistola
+    sprite: {fileID: 21300000, guid: efd2544c50a44804cb8ce81291a9a602, type: 3}
+    uso: 0
+    limite: 9
+    descripcion: arma de alcance medio, capacidad para 12 balas
+    funcion: pistol

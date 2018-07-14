@@ -59,7 +59,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\adaptadorInventario.cs" />
     <Compile Include="Assets\Camarita.cs" />
+    <Compile Include="Assets\codigoPanel.cs" />
     <Compile Include="Assets\controlesJugador.cs" />
     <Compile Include="Assets\controlStamina.cs" />
     <Compile Include="Assets\Menu\Botones.cs" />
@@ -76,6 +78,13 @@
     <Compile Include="Assets\NivelUno\Stamina\SeguidorStamina.cs" />
     <Compile Include="Assets\Pausa.cs" />
     <Compile Include="Assets\revisarPiso.cs" />
+    <Compile Include="Assets\Scenes\BD.cs" />
+    <Compile Include="Assets\Scenes\Canvas.cs" />
+    <Compile Include="Assets\Scenes\InventarioCollider.cs" />
+    <Compile Include="Assets\Scenes\InventarioOIPH.cs" />
+    <Compile Include="Assets\Scenes\Manager.cs" />
+    <Compile Include="Assets\Scenes\PlaceHolder.cs" />
+    <Compile Include="Assets\Scenes\Recogible.cs" />
     <Compile Include="Assets\seguirPersonaje.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Users/Aldair/Documents/Proyecto/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
