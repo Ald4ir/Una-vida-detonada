@@ -28,7 +28,7 @@ public class controlesJugador : MonoBehaviour {
         anim.SetBool("Saltando", saltando);
         anim.SetBool("Enmochilado", enmochilado);
         
-        if (Input.GetKeyDown(KeyCode.W) && pisando)
+        if (Input.GetKeyDown(KeyCode.W) && pisando && rigi.velocity.y == 0)
         {
             saltando = true;
             paso = true;
